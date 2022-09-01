@@ -2853,9 +2853,6 @@ ARjs.Profile.prototype.checkIfValid = function () {
 var ARjs = ARjs || {}
 var THREEx = THREEx || {}
 
-const myHeight =window.innerWidth *window.devicePixelRatio
-const myWidth = window.innerHeight*window.devicePixelRatio
-
 ARjs.Source = THREEx.ArToolkitSource = function (parameters) {
     var _this = this
 
@@ -2872,12 +2869,12 @@ ARjs.Source = THREEx.ArToolkitSource = function (parameters) {
         // Device id of the camera to use (optional)
         deviceId: null,
 
-        // resolution of at which we initialize the source image
-        sourceWidth: myWidth,
-        sourceHeight: myHeight,
+        // resolution of at which we initialize in the source image
+        sourceWidth: 640,
+        sourceHeight: 480,
         // resolution displayed for the source
-        displayWidth: myWidth,
-        displayHeight: myHeight,
+        displayWidth: 640,
+        displayHeight: 480,
     }
     //////////////////////////////////////////////////////////////////////////////
     //		setParameters
